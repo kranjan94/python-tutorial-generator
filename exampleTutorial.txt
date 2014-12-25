@@ -1,0 +1,25 @@
+This is an example file for the Python tutorial generator.
+
+Creating variables in Python is easy. Python is dynamically typed, so you don't need to include variable types in declarations. Try this:
+
+>>> name = 'Guido van Rossum'
+>>> age = 58
+>>> programmer = True
+
+You can manipulate integers like you would in any language (note that things to the right of number signs are comments, so you can ignore them):
+
+>>> x = 3 + 5 * (4 - 2)  # x is now 13
+
+And the Python interpreter will evaluate expressions and print the value:
+
+>>> x + 3
+>>> not programmer
+
+You can even append to strings with arithmetic operators!
+
+>>> accolade = name + ' invented Python.'
+>>> print(accolade)
+
+Python is a very high-level language, and, while it is somewhat slower than
+languages like C++ or even Java, advances in hardware are making that gap
+smaller and smaller.

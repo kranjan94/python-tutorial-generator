@@ -1,0 +1,26 @@
+import sys
+bypass = False
+if len(sys.argv) > 1 and sys.argv[1] == "bypass":
+    bypass = True
+
+def removeExtras(s):
+    """Removes Python in-line comments and whitespace from lines."""
+    s = "".join(s.split())
+    index = s.find('#')
+    if index == -1:
+        return s
+    else:
+        return s[:index]
+
+def getCodeLine(line):
+    """Prompts a user to enter a line of code. Once the line has been entered,
+    returns it. Whitespaces are ignored."""
+    if bypass:
+        return line
+    print(">>>"),
+    userInput = raw_input()
+    while removeExtras(userInput) != removeExtras(line):
+        print("That doesn't look quite right. Try again:\n>>>"),
+        userInput = raw_input()
+    return userInput
+    
